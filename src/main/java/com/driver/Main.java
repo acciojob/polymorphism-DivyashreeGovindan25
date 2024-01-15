@@ -3,9 +3,9 @@ import java.util.*;
 public class Main {
     public static void main(String[] args){
         Product p = new Product();
-        System.out.println(p.product(5,10));
-        System.out.println(p.product(6,1,4));
-        System.out.println(p.product(2.6,8.8));
+        p.product(5,10);
+        p.product(6,1,4);
+        p.product(2.6,8.8);
     }
 }
 class Product{
