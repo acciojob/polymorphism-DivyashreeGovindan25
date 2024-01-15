@@ -2,22 +2,18 @@ package com.driver;
 import java.util.*;
 public class Main {
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        Product p = new Product();
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        System.out.println(p.product(a,b));
-        int a1 = sc.nextInt();
-        int b1 = sc.nextInt();
-        int c1 = sc.nextInt();
-        System.out.println(p.product(a1,b1,c1));
-        double a2 = sc.nextDouble();
-        double b2 = sc.nextDouble();
-        System.out.println(p.product(a2,b2));
+        Product p=new Product();
+        // call this method from Main using Product class object p
+        int ans1= p.product(10, 20);
+        // call this method also from Main using Product class object p
+        int ans2= p.product(10,20,30);
+        // call this method also from Main using Product class object p
+        double ans3=p.product(10.0,20.0);
+        System.out.println(ans1+" "+ans2+" "+ans3);
     }
 }
 class Product{
-    public int product(int x, int y) { return x+y; }
-    public int product(int x, int y, int z) { return x+y+z; }
-    public double product(double x, double y) { return x+y; }
+    public int product(int x, int y) { return x*y; }
+    public int product(int x, int y, int z) { return x*y*z; }
+    public double product(double x, double y) { return x*y; }
 }
